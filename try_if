@@ -3,9 +3,9 @@
 echo "Is it afternoon? Please answer yes or no"
 read timeofday
 
-if [ $timeofday = "yes" ]; then
+if test "$timeofday" = "yes"; then
 	echo "Good Afternoon"
-elif [ $timeofday = "no" ]; then
+elif [ "$timeofday" = "no" ]; then
 	echo "Good morning"
 else
 	echo "wryyyyyyyyyyyy"

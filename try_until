@@ -1,0 +1,10 @@
+#!/bin/sh
+
+until who | grep "$1" > /dev/null
+do
+	echo "here"
+	sleep 60
+done
+
+echo "*** $1 has just logged in ***"
+exit 0
