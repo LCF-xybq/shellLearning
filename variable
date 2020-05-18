@@ -1,0 +1,18 @@
+#!/bin/sh
+
+myvar="Hi there"
+
+echo $myvar
+echo "$myvar"
+echo '$myvar'
+echo \$myvar
+
+echo Enter some text
+read myvar
+echo '$myvar' now equals $myvar
+
+echo $0
+echo $#
+echo $$
+
+exit 0
