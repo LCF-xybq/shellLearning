@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "Is it morning? Please answer yes or no"
+read timeofday
+
+case "$timeofday" in
+	[yY] | [yY][eE][sS]) 
+		echo "Good Morning"
+		echo "Up"
+		;;
+	[nN]*) echo "Good Afternoon";;
+	*  ) echo "wryyyyyy";;
+esac
+
+exit 0

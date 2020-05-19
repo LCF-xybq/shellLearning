@@ -1,0 +1,19 @@
+#!/bin/sh
+
+str="global var"
+
+foo() {
+	local str="local var"
+	echo "in foo"
+	echo $str
+}
+
+echo "script starting"
+echo $str
+
+foo
+
+echo "script ended"
+echo $str
+
+exit 0
