@@ -1,0 +1,6 @@
+#!/bin/sh
+
+foo="jojo"
+export bar="dio the world"
+
+./export2
