@@ -1,0 +1,6 @@
+#!/bin/sh
+
+foo="q"
+if [ "$foo" = "q" ]; then
+	echo "lj"
+fi

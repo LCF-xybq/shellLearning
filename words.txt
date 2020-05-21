@@ -1,0 +1,10 @@
+There are many ways to implement such a table or queue.
+Any implementation should provide enough tracking support to handle previously received Event Messages for all the ‘known’ Event Generators in the basic system.
+For example, a system that has four management controllers on the IPMB that can generate Event Messages should track the previously received Event Messages from those devices.
+It is desired that the Event Receiver can track at least six additional Event Generators to cover additional Event Generators that are added into the system.
+The Event Receiver implementation should account for the possibility that there can be more different Event Generators than there are slots in the table.
+This can be managed by implementing the table with an ‘LRU’ deletion algorithm, where the oldest tracked Event Messages are deleted if a new Event Message comes in and the table or queue is full.
+It can be assumed that there will rarely be more than two event messages that would be in the state where they are to be re-transmitted because of a lost acknowledge.
+With this type of design, the most anomalous behavior would be the multiple recording of the same event.
+This would only be seen under artificially generated ‘stress’ testing and would only be able to occur if there were more event message sources than table slots.
+It is also recommended that the Event Receiver implement the ‘Seq Timeout’ as specified in the IPMB Communications Protocol specification.

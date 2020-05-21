@@ -16,4 +16,11 @@ foo
 echo "script ended"
 echo $str
 
+echo -e "JOJO \c"
+
+read tmp
+var=${tmp%%,*}
+echo $tmp
+echo $var
+
 exit 0
